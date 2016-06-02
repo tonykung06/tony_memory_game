@@ -1,0 +1,16 @@
+.board-game-card {
+    @include transition-property(opacity);
+    @include transition-duration(0.5s);
+    &:focus {
+        @include opacity(0.5);
+    }
+}
+.memorygame-gameboard-wrapper {
+    padding: 5% 0 0 0;
+}
+
+.memorygame-gameboard-score-box {
+    color: white; 
+    font-size: 24px;
+    @include opacity(0);
+}
