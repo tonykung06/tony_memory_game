@@ -25,7 +25,7 @@ router.route('/highscores')
     
         highScore.save(function (err) {
             if (err) {
-                res.send(err);
+                return res.send(err);
             }
             res.json({
                 success: true,
@@ -37,7 +37,7 @@ router.route('/highscores')
     .get(function (req, res) { // GET http://localhost:8080/api/highscores
         HighScore.find(function (err, highScores) {
             if (err) {
-                res.send(err);
+                return res.send(err);
             }
             res.json(highScores);
         });
